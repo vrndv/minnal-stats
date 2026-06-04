@@ -1,0 +1,73 @@
+name: Minecraft Stats Sync
+
+on:
+  # ── Run automatically every 30 minutes ────────────────────────────────────
+  schedule:
+    - cron: '*/30 * * * *'
+
+  # ── Manual trigger ─────────────────────────────────────────────────────────
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual run (optional)'
+        required: false
+        default: 'Manual trigger'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+
+      # ── 1. Checkout repo ────────────────────────────────────────────────────
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+          fetch-depth: 0
+
+      # ── 2. Install lftp ─────────────────────────────────────────────────────
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
+
+      # ── 3. Download stats files from SFTP ───────────────────────────────────
+      #   Downloads every UID.json from /world/stats/
+      #   and usercache.json from root into src/ folder
+      - name: Download stats from SFTP
+        env:
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASS: ${{ secrets.SFTP_PASS }}
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+        run: |
+          mkdir -p src/stats
+
+          echo "Downloading usercache.json..."
+          lftp -u "$SFTP_USER","$SFTP_PASS" "sftp://$SFTP_HOST:$SFTP_PORT" \
+            -e "set sftp:auto-confirm yes; set net:timeout 30; set net:max-retries 3; get /usercache.json -o src/usercache.json; bye"
+          echo "✔ usercache.json: $(wc -c < src/usercache.json) bytes"
+
+          echo "Downloading stats files..."
+          lftp -u "$SFTP_USER","$SFTP_PASS" "sftp://$SFTP_HOST:$SFTP_PORT" \
+            -e "set sftp:auto-confirm yes; set net:timeout 30; set net:max-retries 3; mirror --only-newer /world/stats src/stats; bye"
+          echo "✔ Stats files: $(ls src/stats/ | wc -l) files downloaded"
+          ls src/stats/
+
+      # ── 4. Commit and push ──────────────────────────────────────────────────
+      - name: Commit and push
+        run: |
+          git config user.name "Stats Bot"
+          git config user.email "stats-bot@github-actions"
+          git add src/
+
+          if git diff --cached --quiet; then
+            echo "✅ No changes — stats unchanged since last run"
+          else
+            COUNT=$(git diff --cached --name-only | wc -l | tr -d ' ')
+            echo "Changed files:"
+            git diff --cached --name-only
+            git commit -m "Stats sync — $(date +'%Y-%m-%d %H:%M:%S') — ${COUNT} file(s)"
+            git push origin HEAD
+            echo "Pushed $COUNT file(s)"
+          fi
