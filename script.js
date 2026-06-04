@@ -26,81 +26,81 @@ const CATEGORY_ORDER = [
 ];
 
 const CUSTOM_STAT_ICONS = {
-            // Movement & Travel
-            'walk_one_cm': 'leather_boots',
-            'sprint_one_cm': 'leather_boots',
-            'crouch_one_cm': 'leather_boots',
-            'sneak_time': 'leather_boots',
-            'fall_one_cm': 'iron_boots',
-            'fly_one_cm': 'feather',
-            'aviate_one_cm': 'elytra',
-            'swim_one_cm': 'water_bucket',
-            'walk_on_water_one_cm': 'lily_pad',
-            'walk_under_water_one_cm': 'turtle_helmet',
-            'climb_one_cm': 'ladder',
-            'horse_one_cm': 'saddle',
-            'boat_one_cm': 'oak_boat',
-            'minecart_one_cm': 'minecart',
-            'happy_ghast_one_cm': 'ghast_tear',
-            
-            // Time
-            'play_time': 'clock',
-            'play_one_minute': 'clock',
-            'total_world_time': 'clock',
-            'time_since_death': 'skeleton_skull',
-            'time_since_rest': 'white_bed',
-            
-            // Combat & Damage
-            'damage_dealt': 'iron_sword',
-            'damage_taken': 'iron_chestplate',
-            'damage_resisted': 'shield',
-            'damage_blocked_by_shield': 'shield',
-            'damage_absorbed': 'golden_apple',
-            'mob_kills': 'diamond_sword',
-            'player_kills': 'diamond_sword',
-            'deaths': 'skeleton_skull',
-            
-            // Containers & Storage
-            'open_chest': 'chest',
-            'open_enderchest': 'ender_chest',
-            'open_shulker_box': 'shulker_box',
-            'open_barrel': 'barrel',
-            'inspect_hopper': 'hopper',
-            'inspect_dropper': 'dropper',
-            'inspect_dispenser': 'dispenser',
-            
-            // Workstations & Blocks
-            'interact_with_crafting_table': 'crafting_table',
-            'interact_with_furnace': 'furnace',
-            'interact_with_smoker': 'smoker',
-            'interact_with_blast_furnace': 'blast_furnace',
-            'interact_with_stonecutter': 'stonecutter',
-            'interact_with_brewingstand': 'brewing_stand',
-            'interact_with_beacon': 'beacon',
-            'interact_with_anvil': 'anvil',
-            'interact_with_loom': 'loom',
-            'interact_with_smithing_table': 'smithing_table',
-            'interact_with_lectern': 'lectern',
-            'use_cauldron': 'cauldron',
-            'fill_cauldron': 'water_bucket',
-            'tune_noteblock': 'note_block',
-            'play_noteblock': 'note_block',
-            'bell_ring': 'bell',
-            'pot_flower': 'flower_pot',
-            
-            // Interactions & General
-            'jump': 'rabbit_foot',
-            'drop': 'hopper',
-            'leave_game': 'dark_oak_door',
-            'sleep_in_bed': 'red_bed',
-            'animals_bred': 'wheat',
-            'talked_to_villager': 'emerald',
-            'traded_with_villager': 'emerald'
-        };
+    // Movement & Travel
+    'walk_one_cm': 'leather_boots',
+    'sprint_one_cm': 'leather_boots',
+    'crouch_one_cm': 'leather_boots',
+    'sneak_time': 'leather_boots',
+    'fall_one_cm': 'iron_boots',
+    'fly_one_cm': 'feather',
+    'aviate_one_cm': 'elytra',
+    'swim_one_cm': 'water_bucket',
+    'walk_on_water_one_cm': 'lily_pad',
+    'walk_under_water_one_cm': 'turtle_helmet',
+    'climb_one_cm': 'ladder',
+    'horse_one_cm': 'saddle',
+    'boat_one_cm': 'oak_boat',
+    'minecart_one_cm': 'minecart',
+    'happy_ghast_one_cm': 'ghast_tear',
+
+    // Time
+    'play_time': 'clock',
+    'play_one_minute': 'clock',
+    'total_world_time': 'clock',
+    'time_since_death': 'skeleton_skull',
+    'time_since_rest': 'white_bed',
+
+    // Combat & Damage
+    'damage_dealt': 'iron_sword',
+    'damage_taken': 'iron_chestplate',
+    'damage_resisted': 'shield',
+    'damage_blocked_by_shield': 'shield',
+    'damage_absorbed': 'golden_apple',
+    'mob_kills': 'diamond_sword',
+    'player_kills': 'diamond_sword',
+    'deaths': 'skeleton_skull',
+
+    // Containers & Storage
+    'open_chest': 'chest',
+    'open_enderchest': 'ender_chest',
+    'open_shulker_box': 'shulker_box',
+    'open_barrel': 'barrel',
+    'inspect_hopper': 'hopper',
+    'inspect_dropper': 'dropper',
+    'inspect_dispenser': 'dispenser',
+
+    // Workstations & Blocks
+    'interact_with_crafting_table': 'crafting_table',
+    'interact_with_furnace': 'furnace',
+    'interact_with_smoker': 'smoker',
+    'interact_with_blast_furnace': 'blast_furnace',
+    'interact_with_stonecutter': 'stonecutter',
+    'interact_with_brewingstand': 'brewing_stand',
+    'interact_with_beacon': 'beacon',
+    'interact_with_anvil': 'anvil',
+    'interact_with_loom': 'loom',
+    'interact_with_smithing_table': 'smithing_table',
+    'interact_with_lectern': 'lectern',
+    'use_cauldron': 'cauldron',
+    'fill_cauldron': 'water_bucket',
+    'tune_noteblock': 'note_block',
+    'play_noteblock': 'note_block',
+    'bell_ring': 'bell',
+    'pot_flower': 'flower_pot',
+
+    // Interactions & General
+    'jump': 'rabbit_foot',
+    'drop': 'hopper',
+    'leave_game': 'dark_oak_door',
+    'sleep_in_bed': 'red_bed',
+    'animals_bred': 'wheat',
+    'talked_to_villager': 'emerald',
+    'traded_with_villager': 'emerald'
+};
 
 const ITEM_NAME_MAPPINGS = {
     'carrots': 'carrot', 'potatoes': 'potato', 'iron_chain': 'chain',
-    'wall_torch': 'torch', 'soul_wall_torch': 'soul_torch', 
+    'wall_torch': 'torch', 'soul_wall_torch': 'soul_torch',
     'redstone_wall_torch': 'redstone_torch', 'cave_vines': 'glow_berries',
     'cave_vines_plant': 'glow_berries', 'weeping_vines_plant': 'weeping_vines',
     'twisting_vines_plant': 'twisting_vines', 'sweet_berry_bush': 'sweet_berries',
@@ -114,28 +114,45 @@ async function init() {
         if (!response.ok) throw new Error("Could not fetch usercache");
         const users = await response.json();
         renderUserList(users);
+
+        // --- NEW: URL Parameter Check ---
+        const urlParams = new URLSearchParams(window.location.search);
+        const playerQuery = urlParams.get('player');
+
+        if (playerQuery) {
+            // Find user by Name (case-insensitive) or UUID
+            const targetUser = users.find(u => 
+                u.name.toLowerCase() === playerQuery.toLowerCase() || 
+                u.uuid === playerQuery
+            );
+            
+            if (targetUser) {
+                loadUserStats(targetUser.uuid, targetUser.name);
+            }
+        }
+        // ---------------------------------
+
     } catch (error) {
         document.getElementById('user-list').innerHTML = '<p style="color: var(--danger); padding: 20px;">Failed to load player list.</p>';
     }
 }
-
 function renderUserList(users) {
     const list = document.getElementById('user-list');
     list.innerHTML = '';
-    
+
     users.forEach(user => {
         const div = document.createElement('div');
         div.className = 'user-card';
         div.id = `user-${user.uuid}`;
         div.onclick = () => loadUserStats(user.uuid, user.name);
-        
+
         const img = document.createElement('img');
-        img.src = `https://mc-heads.net/avatar/${user.uuid}/36`; 
+        img.src = `https://mc-heads.net/avatar/${user.uuid}/36`;
         img.loading = "lazy";
-        
+
         const name = document.createElement('span');
         name.innerText = user.name;
-        
+
         div.appendChild(img);
         div.appendChild(name);
         list.appendChild(div);
@@ -155,17 +172,17 @@ function formatWikiFaceName(str, useAlternative = false) {
 }
 
 // Fallback Handlers
-window.handleMobImgError = function(img, nextSrc1, nextSrc2, finalSrc) {
+window.handleMobImgError = function (img, nextSrc1, nextSrc2, finalSrc) {
     if (!img.dataset.errorStage) {
-        img.dataset.errorStage = "1"; img.src = nextSrc1; 
+        img.dataset.errorStage = "1"; img.src = nextSrc1;
     } else if (img.dataset.errorStage === "1") {
-        img.dataset.errorStage = "2"; img.src = nextSrc2; 
+        img.dataset.errorStage = "2"; img.src = nextSrc2;
     } else if (img.dataset.errorStage === "2") {
-        img.dataset.errorStage = "3"; img.onerror = null; img.src = finalSrc; 
+        img.dataset.errorStage = "3"; img.onerror = null; img.src = finalSrc;
     }
 }
 
-window.handleItemImgError = function(img, rawItemName) {
+window.handleItemImgError = function (img, rawItemName) {
     const baseUrl = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/block/`;
     if (!img.dataset.errorStage) {
         img.dataset.errorStage = "1"; img.src = `${baseUrl}${rawItemName}.png`;
@@ -174,7 +191,7 @@ window.handleItemImgError = function(img, rawItemName) {
     } else if (img.dataset.errorStage === "2") {
         img.dataset.errorStage = "3"; img.src = `${baseUrl}${rawItemName}_0.png`;
     } else if (img.dataset.errorStage === "3") {
-        img.dataset.errorStage = "4"; img.onerror = null; 
+        img.dataset.errorStage = "4"; img.onerror = null;
         img.src = `https://blocksitems.com/api/v1/items/minecraft:paper/icon`;
     }
 }
@@ -186,7 +203,7 @@ function formatTicksToTime(ticks) {
     let days = Math.floor(totalSeconds / 86400);
     let hours = Math.floor((totalSeconds % 86400) / 3600);
     let minutes = Math.floor((totalSeconds % 3600) / 60);
-    
+
     let result = [];
     if (days > 0) result.push(`${days}d`);
     if (hours > 0) result.push(`${hours}h`);
@@ -207,7 +224,7 @@ function formatStatValue(key, value) {
 }
 
 // Global function to toggle grid expansion
-window.toggleExpand = function(gridId, btnElement) {
+window.toggleExpand = function (gridId, btnElement) {
     const grid = document.getElementById(gridId);
     if (grid) {
         const isExpanded = grid.classList.toggle('expanded');
@@ -218,6 +235,12 @@ window.toggleExpand = function(gridId, btnElement) {
 
 // Main Loader
 async function loadUserStats(uuid, username) {
+    // --- NEW: Update the URL to make it shareable ---
+    const newUrl = new URL(window.location);
+    newUrl.searchParams.set('player', username);
+    window.history.pushState({}, '', newUrl);
+    // ------------------------------------------------
+
     const container = document.getElementById('stats-container');
     
     container.innerHTML = `
@@ -251,7 +274,7 @@ async function loadUserStats(uuid, username) {
 function renderStats(username, uuid, statsData) {
     const container = document.getElementById('stats-container');
     const customStats = statsData['minecraft:custom'] || {};
-    
+
     const playTicks = customStats['minecraft:play_time'] || customStats['minecraft:play_one_minute'] || 0;
     const totalDistanceCm = Object.keys(customStats).filter(key => key.includes('one_cm')).reduce((sum, key) => sum + customStats[key], 0);
     const blocksMined = Object.values(statsData['minecraft:mined'] || {}).reduce((a, b) => a + b, 0);
@@ -291,11 +314,11 @@ function renderStats(username, uuid, statsData) {
     for (const category of finalCategoryOrder) {
         const items = statsData[category];
         if (!items || Object.keys(items).length === 0) continue;
-        
+
         const catIconName = CATEGORY_ICONS[category] || 'chest';
         const isMobCategory = (category === 'minecraft:killed' || category === 'minecraft:killed_by');
         const isCustomCategory = (category === 'minecraft:custom');
-        
+
         const sortedItems = Object.entries(items).sort((a, b) => b[1] - a[1]);
         const itemCount = sortedItems.length;
         const gridId = `grid-${category.replace('minecraft:', '')}`;
@@ -324,11 +347,11 @@ function renderStats(username, uuid, statsData) {
                     const fallbackUrl = `https://blocksitems.com/api/v1/items/minecraft:paper/icon`;
                     iconHtml = `<img src="${primaryUrl}" onerror="handleMobImgError(this, '${secondaryUrl}', '${eggUrl}', '${fallbackUrl}')" alt="mob" loading="lazy">`;
                 }
-            } 
+            }
             else if (isCustomCategory) {
                 const mappedItem = CUSTOM_STAT_ICONS[itemClean] || 'map';
                 iconHtml = `<img src="https://blocksitems.com/api/v1/items/minecraft:${mappedItem}/icon" onerror="this.src='https://blocksitems.com/api/v1/items/minecraft:paper/icon'" alt="stat_icon" loading="lazy">`;
-            } 
+            }
             else {
                 let resolvedName = itemClean.replace('_wall_sign', '_sign');
                 const mappedItem = ITEM_NAME_MAPPINGS[resolvedName] || resolvedName;
@@ -345,9 +368,9 @@ function renderStats(username, uuid, statsData) {
                 </div>
             `;
         }
-        
+
         htmlStr += `</div>`; // Close .stat-grid
-        
+
         // Append Expand Button if threshold requires it (> 4 for mobile base threshold)
         if (itemCount > 4) {
             htmlStr += `
