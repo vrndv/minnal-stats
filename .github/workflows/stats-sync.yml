@@ -35,6 +35,11 @@ jobs:
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
         run: |
           mkdir -p src/stats
+
+          # Test connectivity first
+          echo "Testing connection to $SFTP_HOST:$SFTP_PORT..."
+          nc -zv -w 10 "$SFTP_HOST" "$SFTP_PORT" && echo "✔ Port reachable" || echo "❌ Port unreachable"
+
           lftp -u "$SFTP_USER","$SFTP_PASS" "sftp://$SFTP_HOST:$SFTP_PORT" \
             -e "set sftp:auto-confirm yes; set net:timeout 60; set net:max-retries 5; get \"/usercache.json\" -o \"src/usercache.json\"; bye"
           echo "✔ usercache.json: $(wc -c < src/usercache.json) bytes"
