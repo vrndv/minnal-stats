@@ -41,7 +41,7 @@ jobs:
           nc -zv -w 10 "$SFTP_HOST" "$SFTP_PORT" && echo "✔ Port reachable" || echo "❌ Port unreachable"
 
           lftp -u "$SFTP_USER","$SFTP_PASS" "sftp://$SFTP_HOST:$SFTP_PORT" \
-            -e "set sftp:auto-confirm yes; set net:timeout 60; set net:max-retries 5; get \"/usercache.json\" -o \"src/usercache.json\"; bye"
+            -e "set sftp:auto-confirm yes; set xfer:clobber yes; set net:timeout 60; set net:max-retries 5; get \"/usercache.json\" -o \"src/usercache.json\"; bye"
           echo "✔ usercache.json: $(wc -c < src/usercache.json) bytes"
 
       # ── Get list of stat files then download each one ────────────────────────
@@ -57,7 +57,7 @@ jobs:
 
           # Get file listing first
           lftp -u "$SFTP_USER","$SFTP_PASS" "sftp://$SFTP_HOST:$SFTP_PORT" \
-            -e "set sftp:auto-confirm yes; set net:timeout 60; set net:max-retries 5; cls -1 /world/stats/; bye" \
+            -e "set sftp:auto-confirm yes; set xfer:clobber yes; set net:timeout 60; set net:max-retries 5; cls -1 /world/stats/; bye" \
             > /tmp/stats_list.txt 2>&1
 
           echo "Stats files on server:"
@@ -68,7 +68,7 @@ jobs:
             filename=$(basename "$filename")
             [[ "$filename" == *.json ]] || continue
             lftp -u "$SFTP_USER","$SFTP_PASS" "sftp://$SFTP_HOST:$SFTP_PORT" \
-              -e "set sftp:auto-confirm yes; set net:timeout 60; set net:max-retries 5; get \"/world/stats/${filename}\" -o \"src/stats/${filename}\"; bye"
+              -e "set sftp:auto-confirm yes; set xfer:clobber yes; set net:timeout 60; set net:max-retries 5; get \"/world/stats/${filename}\" -o \"src/stats/${filename}\"; bye"
             echo "  ✔ $filename"
           done < /tmp/stats_list.txt
 
