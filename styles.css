@@ -38,6 +38,34 @@ body {
     z-index: -1;
     overflow: hidden;
 }
+/* Universal Back Button */
+.back-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateX(-2px);
+}
 
 .glow-orb {
     position: absolute;
@@ -105,8 +133,13 @@ body {
 
 /* Player Selector */
 .player-selector-wrapper {
-    position: relative;
-    margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: --secondary;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0;
 }
 
 .user-list {
