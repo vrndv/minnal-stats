@@ -1,1 +1,71 @@
-{"stats":{"minecraft:mined":{"minecraft:short_grass":1,"minecraft:wall_torch":1,"minecraft:glass_pane":2,"minecraft:oak_leaves":1,"minecraft:oak_stairs":55,"minecraft:smooth_stone_slab":15,"minecraft:oak_planks":35,"minecraft:cobbled_deepslate":1},"minecraft:crafted":{"minecraft:stick":4,"minecraft:iron_pickaxe":1},"minecraft:used":{"minecraft:oak_stairs":1,"minecraft:stone_axe":94,"minecraft:leather_boots":2,"minecraft:stone_pickaxe":16,"minecraft:leather_chestplate":1,"minecraft:iron_boots":2,"minecraft:leather_leggings":1,"minecraft:leather_helmet":1},"minecraft:picked_up":{"minecraft:iron_boots":1,"minecraft:oak_stairs":41,"minecraft:oak_log":25,"minecraft:smooth_stone_slab":15,"minecraft:oak_planks":31,"minecraft:torch":1,"minecraft:iron_helmet":1,"minecraft:iron_chestplate":1,"minecraft:cobbled_deepslate":1},"minecraft:custom":{"minecraft:interact_with_crafting_table":2,"minecraft:time_since_rest":20104,"minecraft:walk_one_cm":38962,"minecraft:leave_game":3,"minecraft:damage_taken":77,"minecraft:play_time":20104,"minecraft:jump":191,"minecraft:time_since_death":20104,"minecraft:sprint_one_cm":35515,"minecraft:open_chest":9,"minecraft:fall_one_cm":3879,"minecraft:total_world_time":20104,"minecraft:fly_one_cm":33616,"minecraft:walk_on_water_one_cm":712,"minecraft:crouch_one_cm":17325,"minecraft:sneak_time":7966,"minecraft:climb_one_cm":556}},"DataVersion":4556}
+{
+  "stats": {
+    "minecraft:crafted": {
+      "minecraft:stick": 4,
+      "minecraft:iron_pickaxe": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:iron_boots": 1,
+      "minecraft:oak_stairs": 41,
+      "minecraft:oak_log": 25,
+      "minecraft:smooth_stone_slab": 15,
+      "minecraft:oak_planks": 31,
+      "minecraft:torch": 1,
+      "minecraft:iron_helmet": 1,
+      "minecraft:iron_chestplate": 1,
+      "minecraft:cobbled_deepslate": 1
+    },
+    "minecraft:killed_by": {
+      "minecraft:player": 1
+    },
+    "minecraft:custom": {
+      "minecraft:interact_with_crafting_table": 2,
+      "minecraft:time_since_rest": 50365,
+      "minecraft:walk_one_cm": 58193,
+      "minecraft:leave_game": 4,
+      "minecraft:damage_taken": 235,
+      "minecraft:play_time": 92678,
+      "minecraft:damage_dealt": 32,
+      "minecraft:open_shulker_box": 3,
+      "minecraft:jump": 220,
+      "minecraft:time_since_death": 50244,
+      "minecraft:drop": 1,
+      "minecraft:sprint_one_cm": 45042,
+      "minecraft:open_chest": 13,
+      "minecraft:fall_one_cm": 5505,
+      "minecraft:total_world_time": 92678,
+      "minecraft:fly_one_cm": 34109,
+      "minecraft:walk_on_water_one_cm": 712,
+      "minecraft:crouch_one_cm": 17468,
+      "minecraft:sneak_time": 8138,
+      "minecraft:climb_one_cm": 1456,
+      "minecraft:deaths": 1
+    },
+    "minecraft:used": {
+      "minecraft:stone_axe": 94,
+      "minecraft:oak_stairs": 1,
+      "minecraft:stone_sword": 2,
+      "minecraft:cooked_beef": 1,
+      "minecraft:leather_boots": 2,
+      "minecraft:stone_pickaxe": 16,
+      "minecraft:leather_chestplate": 1,
+      "minecraft:iron_boots": 2,
+      "minecraft:leather_leggings": 1,
+      "minecraft:leather_helmet": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:sand": 64
+    },
+    "minecraft:mined": {
+      "minecraft:short_grass": 1,
+      "minecraft:wall_torch": 1,
+      "minecraft:glass_pane": 2,
+      "minecraft:oak_leaves": 2,
+      "minecraft:oak_stairs": 55,
+      "minecraft:smooth_stone_slab": 15,
+      "minecraft:oak_planks": 35,
+      "minecraft:cobbled_deepslate": 1
+    }
+  },
+  "DataVersion": 4671
+}
