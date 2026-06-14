@@ -1,0 +1,70 @@
+{
+  "stats": {
+    "minecraft:crafted": {
+      "minecraft:stick": 8,
+      "minecraft:wooden_pickaxe": 1,
+      "minecraft:shield": 1,
+      "minecraft:oak_planks": 24,
+      "minecraft:iron_pickaxe": 1,
+      "minecraft:crafting_table": 2,
+      "minecraft:iron_axe": 1
+    },
+    "minecraft:custom": {
+      "minecraft:interact_with_crafting_table": 5,
+      "minecraft:time_since_rest": 27642,
+      "minecraft:walk_one_cm": 4399,
+      "minecraft:leave_game": 1,
+      "minecraft:walk_under_water_one_cm": 68,
+      "minecraft:mob_kills": 1,
+      "minecraft:damage_taken": 410,
+      "minecraft:play_time": 27642,
+      "minecraft:damage_dealt": 43,
+      "minecraft:jump": 242,
+      "minecraft:time_since_death": 27642,
+      "minecraft:sprint_one_cm": 24808,
+      "minecraft:fall_one_cm": 8457,
+      "minecraft:total_world_time": 27642,
+      "minecraft:swim_one_cm": 504,
+      "minecraft:fly_one_cm": 36264,
+      "minecraft:walk_on_water_one_cm": 1182,
+      "minecraft:crouch_one_cm": 1608,
+      "minecraft:sneak_time": 1025
+    },
+    "minecraft:used": {
+      "minecraft:iron_axe": 3,
+      "minecraft:crafting_table": 2,
+      "minecraft:wooden_pickaxe": 6,
+      "minecraft:iron_pickaxe": 15,
+      "minecraft:cooked_porkchop": 4,
+      "minecraft:ender_pearl": 1,
+      "minecraft:cobblestone": 16
+    },
+    "minecraft:picked_up": {
+      "minecraft:egg": 1,
+      "minecraft:ender_pearl": 3,
+      "minecraft:dirt": 3,
+      "minecraft:oak_log": 6,
+      "minecraft:cobblestone": 18,
+      "minecraft:wheat_seeds": 2,
+      "minecraft:chicken": 1,
+      "minecraft:spruce_door": 2,
+      "minecraft:cooked_porkchop": 11,
+      "minecraft:crafting_table": 1,
+      "minecraft:iron_ingot": 10
+    },
+    "minecraft:killed": {
+      "minecraft:chicken": 1
+    },
+    "minecraft:mined": {
+      "minecraft:short_grass": 2,
+      "minecraft:tall_grass": 3,
+      "minecraft:bush": 1,
+      "minecraft:dirt": 1,
+      "minecraft:crafting_table": 2,
+      "minecraft:oak_log": 6,
+      "minecraft:grass_block": 2,
+      "minecraft:stone": 18
+    }
+  },
+  "DataVersion": 4671
+}
